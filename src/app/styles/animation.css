@@ -1,0 +1,27 @@
+
+@keyframes glow {
+    0% {
+      box-shadow: 0 0 10px #ffffff; /* Initial glow color and size */
+    }
+    50% {
+      box-shadow: 0 0 20px #33ccff; /* Midpoint glow color and size */
+    }
+    100% {
+      box-shadow: 0 0 10px #ffffff; /* Final glow color and size */
+    }
+  }
+  
+  .glow-container {
+    width: 200px; /* Adjust the width of your div */
+    height: 200px; /* Adjust the height of your div */
+    background-color: #3498db; /* Adjust the background color of your div */
+    border-radius: 8px; /* Adjust the border radius of your div */
+    margin: 20px; /* Adjust margin as needed */
+    transition: box-shadow 0.3s ease-in-out; /* Add a smooth transition for the glow effect */
+  }
+  
+  .glow-container:hover {
+    animation: glow 1s infinite alternate; /* Adjust the animation duration and timing function for hover */
+    box-shadow: 0 0 20px #33ccff; /* Adjust the initial glow on hover */
+  }
+  
