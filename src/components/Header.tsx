@@ -22,7 +22,7 @@ const Header = (props: Props) => {
       <div className="hidden items-center space-x-4 sm:flex">
         <>
           <Link
-            href="/login"
+            href="/pricing"
             className={buttonVariants({
               variant: "ghost",
               size: "sm",

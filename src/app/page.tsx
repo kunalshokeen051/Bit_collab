@@ -4,7 +4,6 @@ import MaxWidthWrapper from "./HOC/MaxWidthWrapper";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
-import Header from "../components/Header";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
@@ -18,7 +17,6 @@ export default function Home() {
 
   return (
     <>
-      <Header />
       <div className="">
         <MaxWidthWrapper className="mb-12 mt-18 sm:mt-4 flex flex-col items-center justify-center">
           <div

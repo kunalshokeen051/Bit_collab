@@ -27,13 +27,13 @@ const Page = (props: Props) => {
 
   return (
     <div className="w-full h-screen flex justify-center items-center">
-      <Link  className={`absolute top-5 left-5 ${buttonVariants({
+      {/* <Link  className={`absolute top-5 left-5 ${buttonVariants({
               // variant: "ghost",
               size: "sm",
             })}`}
        href='/'>
-        Go back</Link>
-      <h1 className="text-3xl">Welcome to Your Dashboard, {userData?.given_name}!</h1>
+        Go back</Link> */}
+      <h1 className="text-3xl">Welcome to Your Dashboard, {userData ? userData?.given_name :"User"}!</h1>
     </div>
   )
 }
