@@ -7,21 +7,21 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 // import { useEffect } from "react";
 
-// export default function Home() {
-//   useEffect(() => {
-//     return () => {
-//       AOS.init();
-//     };
-//   }, []);
+export default function Home() {
+  // useEffect(() => {
+  //   return () => {
+  //     AOS.init();
+  //   };
+  // }, []);
 
   return (
     <>
       <div className="">
         <MaxWidthWrapper className="mb-12 mt-18 sm:mt-4 flex flex-col items-center justify-center">
           <div
-            data-aos="fade-in"
-            data-aos-duration="1000"
-            data-aos-delay="1000"
+            // data-aos="fade-in"
+            // data-aos-duration="1000"
+            // data-aos-delay="1000"
             className="mx-auto mb-4 flex max-w-fit items-center justify-center space-x-2 overflow-hidden rounded-full border-2 border-gray-500 bg-white px-7 py-2 shadow-md backdrop-blur transition-all hover:border-gray-300 hover:bg-white/50"
           >
             <p
@@ -31,8 +31,8 @@ import "aos/dist/aos.css";
             </p>
           </div>
           <h1
-            data-aos="fade-up"
-            data-aos-duration="2000"
+            // data-aos="fade-up"
+            // data-aos-duration="2000"
             className="max-w-4xl flex justify-center flex-wrap text-5xl font-bold md:text-6xl lg:text-7xl"
           >
             <span className="text-blue-600 mr-2">Collaborate </span>
@@ -41,18 +41,18 @@ import "aos/dist/aos.css";
             Smarter
           </h1>
           <p
-            data-aos="fade-in"
-            data-aos-duration="1000"
-            data-aos-delay="800"
+            // data-aos="fade-in"
+            // data-aos-duration="1000"
+            // data-aos-delay="800"
             className="mt-5 max-w-prose text-zinc-700 sm:text-lg"
           >
             BitSync enables agile teamwork and enhanced productivity. Elevate
             your projects with open-source collaboration at its best.
           </p>
           <Link
-            data-aos="fade-in"
-            data-aos-duration="1000"
-            data-aos-delay="1000"
+            // data-aos="fade-in"
+            // data-aos-duration="1000"
+            // data-aos-delay="1000"
             className={buttonVariants({
               size: "lg",
               className: "mt-5 bg-zinc-800 hover:bg-zinc-900",
@@ -81,9 +81,9 @@ import "aos/dist/aos.css";
             </div>
           </div>
           <div
-            data-aos="fade-in"
-            data-aos-duration="1000"
-            data-aos-delay="1200"
+            // data-aos="fade-in"
+            // data-aos-duration="1000"
+            // data-aos-delay="1200"
             className="mx-auto max-w-6xl px-6 lg:px-8 "
           >
             <div className="mt-16 flow-root sm:mt-24">
@@ -118,10 +118,10 @@ import "aos/dist/aos.css";
       {/* Feature Section */}
 
       <div
-        data-aos="fade-down"
-        data-aos-easing="linear"
-        data-aos-duration="1000"
-        data-aos-once="true"
+        // data-aos="fade-down"
+        // data-aos-easing="linear"
+        // data-aos-duration="1000"
+        // data-aos-once="true"
         className="mx-auto mb-32 mt-32 max-w-5xl sm:mt-56"
       >
         <div className="mb-12 px-6 lg:px-8">
