@@ -44,7 +44,7 @@ export default function Home() {
             // data-aos="fade-in"
             // data-aos-duration="1000"
             // data-aos-delay="800"
-            className="mt-5 max-w-prose text-zinc-700 sm:text-lg"
+            className="mt-5 max-w-prose text-zinc- 700 sm:text-lg"
           >
             BitSync enables agile teamwork and enhanced productivity. Elevate
             your projects with open-source collaboration at its best.
