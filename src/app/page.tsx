@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import MaxWidthWrapper from "./HOC/MaxWidthWrapper";
 import Link from "next/link";
@@ -6,14 +5,14 @@ import { ArrowRight } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 
-export default function Home() {
-  useEffect(() => {
-    return () => {
-      AOS.init();
-    };
-  }, []);
+// export default function Home() {
+//   useEffect(() => {
+//     return () => {
+//       AOS.init();
+//     };
+//   }, []);
 
   return (
     <>

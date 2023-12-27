@@ -2,7 +2,12 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { buttonVariants } from "./ui/button";
-import { DoorOpenIcon, Lightbulb, LightbulbIcon, LightbulbOff, SignalIcon, UserCircleIcon } from "lucide-react";
+import {
+  DoorOpenIcon,
+  Lightbulb,
+  LightbulbIcon,
+  LightbulbOff,
+} from "lucide-react";
 
 // import { RootState } from "@/app/GlobalRedux/store";
 // import { useSelector,useDispatch } from "react-redux";
@@ -10,25 +15,22 @@ import { DoorOpenIcon, Lightbulb, LightbulbIcon, LightbulbOff, SignalIcon, UserC
 
 type Props = {};
 
-
 const Header = (props: Props) => {
   // const isAuthenticated = useSelector((state:RootState) => state.counter.isAuthenticated);
   // const dispatch = useDispatch();
 
-  const [theme,setTheme] = useState<string>('light');
+  const [theme, setTheme] = useState<string>("light");
 
-  function SwitchMode(){
-    let html = document.getElementsByTagName('html')[0];
-    if (html.classList.contains('light')) {
-
-      html.classList.remove('light');
-      html.classList.add('dark');
+  function SwitchMode() {
+    let html = document.getElementsByTagName("html")[0];
+    if (html.classList.contains("light")) {
+      html.classList.remove("light");
+      html.classList.add("dark");
     } else {
-      html.classList.remove('dark');
-      html.classList.add('light');
+      html.classList.remove("dark");
+      html.classList.add("light");
     }
   }
-
 
   return (
     <div className="h-[55px] px-2 flex justify-between">
@@ -61,21 +63,27 @@ const Header = (props: Props) => {
             className={buttonVariants({
               size: "sm",
             })}
-          >Sign in <DoorOpenIcon className="ml-2"/>
+          >
+            Sign in <DoorOpenIcon className="ml-2" />
           </Link>
           <button
-           className={buttonVariants({
-            variant: "ghost",
-            size: "sm",
-          })}
-          onClick={SwitchMode}
+            className={buttonVariants({
+              variant: "ghost",
+              size: "sm",
+            })}
+            onClick={SwitchMode}
           >
-          {
-            theme == 'light' 
-            ? <><Lightbulb className="mr-2"/> Dark Mode</>
-            :<><LightbulbOff className="mr-2"/> Light Mode</>
-            
-          }
+            {theme == "light" ? (
+              <>
+                <Lightbulb className="mr-2" />
+                Dark Mode
+              </>
+            ) : (
+              <>
+                <LightbulbOff className="mr-2" />
+                Light Mode
+              </>
+            )}
           </button>
         </>
       </div>
