@@ -1,13 +1,35 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { buttonVariants } from "./ui/button";
-import {RegisterLink, LoginLink} from "@kinde-oss/kinde-auth-nextjs/components";
-import { DoorOpenIcon, SignalIcon } from "lucide-react";
+import { DoorOpenIcon, Lightbulb, LightbulbIcon, LightbulbOff, SignalIcon, UserCircleIcon } from "lucide-react";
+
+// import { RootState } from "@/app/GlobalRedux/store";
+// import { useSelector,useDispatch } from "react-redux";
+// import {setIsAuthenticated } from "@/app/GlobalRedux/Features/Counter/AuthSlice";
 
 type Props = {};
 
+
 const Header = (props: Props) => {
+  // const isAuthenticated = useSelector((state:RootState) => state.counter.isAuthenticated);
+  // const dispatch = useDispatch();
+
+  const [theme,setTheme] = useState<string>('light');
+
+  function SwitchMode(){
+    let html = document.getElementsByTagName('html')[0];
+    if (html.classList.contains('light')) {
+
+      html.classList.remove('light');
+      html.classList.add('dark');
+    } else {
+      html.classList.remove('dark');
+      html.classList.add('light');
+    }
+  }
+
+
   return (
     <div className="h-[55px] px-2 flex justify-between">
       {/* left Div */}
@@ -17,10 +39,14 @@ const Header = (props: Props) => {
           <span>Works</span>
         </div>
       </Link>
+      {/* <button onClick={() => dispatch(setIsAuthenticated(!isAuthenticated))}>authenticate</button>
+<h2>{isAuthenticated ? " user is logged in" : "user is not logged in"}</h2> */}
 
       {/* right div */}
       <div className="hidden items-center space-x-4 sm:flex">
         <>
+          {/* <button onClick={() => dispatch(increment())}>Increment</button>
+        <button onClick={() => dispatch(decrement())}>Decrement</button> */}
           <Link
             href="/pricing"
             className={buttonVariants({
@@ -30,14 +56,27 @@ const Header = (props: Props) => {
           >
             Pricing
           </Link>
-          <LoginLink
+          <Link
+            href="/login"
             className={buttonVariants({
-            //   variant: "ghost",
               size: "sm",
             })}
+          >Sign in <DoorOpenIcon className="ml-2"/>
+          </Link>
+          <button
+           className={buttonVariants({
+            variant: "ghost",
+            size: "sm",
+          })}
+          onClick={SwitchMode}
           >
-            Sign in <DoorOpenIcon className="ml-2"/>
-          </LoginLink>
+          {
+            theme == 'light' 
+            ? <><Lightbulb className="mr-2"/> Dark Mode</>
+            :<><LightbulbOff className="mr-2"/> Light Mode</>
+            
+          }
+          </button>
         </>
       </div>
     </div>

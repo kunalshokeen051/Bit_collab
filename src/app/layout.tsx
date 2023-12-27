@@ -1,28 +1,34 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
-import Header from '@/components/Header'
+import type { Metadata } from "next";
+import Providers from "./GlobalRedux/provider";
 
-const inter = Inter({ subsets: ['latin'] })
+import { Inter } from "next/font/google";
+import "./globals.css";
+import Header from "@/components/Header";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Bit Sync - Syncing Teams',
-  description: 'Bit Sync - Syncing Teams, Anywhere, Anytime',
-  bookmarks: 'https://example.com',
-  alternates:{ canonical: "https://example.com" }
-}
+  title: "Bit Sync - Syncing Teams",
+  description: "Bit Sync - Syncing Teams, Anywhere, Anytime",
+  bookmarks: "https://example.com",
+  alternates: { canonical: "https://example.com" },
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className='light'>
-      <body className={`min-h-screen font-sans antialiased grainy ${inter.className}`}>
-      <Header />
-        {children}
-        </body>
+    <html lang="en" className="light">
+      <body
+        className={`min-h-screen font-sans antialiased grainy ${inter.className}`}
+      >
+        <Providers>
+          <Header />
+          {children}
+        </Providers>
+      </body>
     </html>
-  )
+  );
 }
